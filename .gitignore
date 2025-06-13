@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.history
+
+# Virtual Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+*.nbconvert.ipynb
+*.nbconvert.html
+*.nbconvert.pdf
+*.nbconvert.md
+*.nbconvert.tex
+*.nbconvert.txt
+*.nbconvert.xml
+*.nbconvert.docx
+*.nbconvert.pptx
+*.nbconvert.xlsx
+
+# Ignore Model files
+./models/*
+
+test/*
+runs/*
+
+# Ignore dataset for merging
+dataset.yaml
+
+# Project specific
+models/*.pt

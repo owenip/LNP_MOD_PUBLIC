@@ -1,0 +1,4 @@
+images_sets:
+  - name: <dataset-name>
+    images_dir: <path-to-images>
+    coco_file: <path-to-coco-file>

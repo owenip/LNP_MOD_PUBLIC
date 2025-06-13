@@ -1,0 +1,79 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "lnp_mod"
+version = "0.1.0"
+description = "Lipid Nanoparticle Morphology Detection"
+authors = ["Owen Ip <ipowen10@gmail.com>"]
+readme = "README.md"
+packages = [{include = "lnp_mod"}]
+
+[tool.poetry.scripts]
+lnp-mod = "lnp_mod.core.inference:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+# Core ML/DL
+torch = "^2.3.1"
+torchvision = "^0.18.1"
+ultralytics = "^8.2.58"
+opencv-python = "^4.10.0"
+numpy = "^1.26.4"
+scipy = "^1.13.1"
+monai = "^1.3.2"  # Added based on environment.yaml
+
+# Data Processing
+pandas = "^2.2.2"
+shapely = "^2.0.5"
+pycocotools = "^2.0.8"
+
+# Visualization
+matplotlib = "^3.9.1"
+seaborn = "^0.13.2"
+plotly = "^5.18.0"
+
+# Utilities
+tqdm = "^4.66.4"
+pyyaml = "^6.0.1"
+supervision = "^0.22.0"
+
+[tool.poetry.group.dev.dependencies]
+# Testing
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+
+# Linting and Formatting
+black = "^23.3.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+mypy = "^1.3.0"
+
+# Documentation
+sphinx = "^7.0.1"
+sphinx-rtd-theme = "^1.2.0"
+
+# Development Tools
+ipykernel = "^6.23.1"
+jupyter = "^1.0.0"
+
+[tool.poetry.group.optional.dependencies]
+gdown = "^5.2.0"
+kaleido = "^0.2.1"
+openpyxl = "^3.1.2"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
